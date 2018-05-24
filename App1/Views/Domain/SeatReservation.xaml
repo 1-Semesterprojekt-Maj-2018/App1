@@ -21,30 +21,13 @@
             <ColumnDefinition Width="Auto" MinWidth="250"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-
-
-        <ListView Grid.Row="0" Grid.Column="0" Style="{StaticResource ListViewStyle}"
-                  ItemsSource="{Binding }"
-                  SelectedItem="{Binding }">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <StackPanel Style="{StaticResource StackPanelItemTemplateStyle}">
-                        <!-- Film, dato/antal og Betaling -->
-                        <TextBlock Style="{StaticResource }" Text="{Binding }" />
-                        <TextBlock Style="{StaticResource }" Text="{Binding }" />
-                        <TextBlock Style="{StaticResource }" Text="{Binding }" />
-                    </StackPanel>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+        
+        <Grid Grid.Row="0" Grid.Column="1" Style="{StaticResource StackPanelItemTemplateStyle}">
+            <Button Content="Ok" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontSize="30" Margin="0,0,43,32" Width="100"/>
+        </Grid>
 
         <!-- Navn, Dato og antal view -->
-        <StackPanel Grid.Row="0" Grid.Column="1" Style="{StaticResource StackPanelItemTemplateStyle}" >
-
-            <!-- Navn -->
-            <StackPanel Style="{StaticResource StackPanelItemTemplateStyle }" Height="224">
-                <TextBlock Style="{StaticResource TextBlockNordiskBiograf}" Text="Nordisk Biograf" Margin="365,105,263,105" Width="Auto"/>
-            </StackPanel>
+        <StackPanel Grid.Row="0" Grid.Column="0" Style="{StaticResource StackPanelItemTemplateStyle}" >
 
             <!-- Dato og tid -->
             <StackPanel Style="{StaticResource StackPanelDetailsItemStyle}" Height="115">
